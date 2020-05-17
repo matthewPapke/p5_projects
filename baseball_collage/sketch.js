@@ -5,6 +5,8 @@ var y2;
 var img;
 var img_x;
 var img_y;
+var background_colors;
+var background_color;
 
 
 function setup() {
@@ -24,10 +26,13 @@ function setup() {
 
   frameRate(2);
   imageMode(CENTER);
+
+  background_colors = ['#921224', '#bce0da', '#ebf5ee', '#bdc6b8'];
 }
 
 function draw() {
-  background(46,139,87);
+  background_color = background_colors[randomNumber(background_colors.length) - 1];
+  background(background_color);
 
   y1 = randomNumber(windowHeight);
   y2 = randomNumber(windowHeight);
